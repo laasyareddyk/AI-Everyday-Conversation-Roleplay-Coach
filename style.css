@@ -1,0 +1,213 @@
+/* Modern EdTech Aesthetic CSS for AI Everyday Conversation Roleplay Coach */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --primary: #4F46E5;
+  --primary-light: #EEF2FF;
+  --secondary: #7C3AED;
+  --accent: #06B6D4;
+  --bg-gradient: linear-gradient(135deg, #F8FAFC 0%, #F1F5F9 100%);
+  --card-bg: #FFFFFF;
+  --text-main: #1E293B;
+  --text-muted: #64748B;
+  --border-color: #E2E8F0;
+  --success: #10B981;
+  --warning: #F59E0B;
+}
+
+html, body, [class*="css"] {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* App Header Styling */
+.app-header {
+  background: linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%);
+  color: white;
+  padding: 2.2rem 2rem;
+  border-radius: 16px;
+  margin-bottom: 2rem;
+  box-shadow: 0 10px 25px -5px rgba(79, 70, 229, 0.25);
+}
+
+.app-header h1 {
+  color: white !important;
+  font-weight: 800;
+  font-size: 2.2rem;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.app-header p {
+  color: #E0E7FF;
+  font-size: 1.05rem;
+  margin-top: 0.6rem;
+  margin-bottom: 0;
+  max-width: 700px;
+}
+
+/* Feature & Scenario Cards */
+.custom-card {
+  background: white;
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+  padding: 1.5rem;
+  margin-bottom: 1.2rem;
+  transition: all 0.25s ease-in-out;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.04);
+}
+
+.custom-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 20px -3px rgba(79, 70, 229, 0.12);
+  border-color: #C7D2FE;
+}
+
+.scenario-header {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 0.8rem;
+}
+
+.scenario-icon {
+  font-size: 2rem;
+  background: #F5F3FF;
+  border-radius: 12px;
+  padding: 0.5rem;
+  line-height: 1;
+}
+
+/* Chat Bubbles */
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin: 1.5rem 0;
+}
+
+.bubble-ai {
+  background: #FFFFFF;
+  border: 1px solid #E0E7FF;
+  border-left: 4px solid #6366F1;
+  border-radius: 14px;
+  padding: 1.1rem 1.4rem;
+  color: #1E293B;
+  box-shadow: 0 2px 8px rgba(99, 102, 241, 0.06);
+  margin-right: 15%;
+  line-height: 1.6;
+}
+
+.bubble-user {
+  background: linear-gradient(135deg, #4F46E5 0%, #6366F1 100%);
+  color: white;
+  border-radius: 14px;
+  padding: 1.1rem 1.4rem;
+  margin-left: 15%;
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2);
+  line-height: 1.6;
+}
+
+.sender-tag {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.4rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.sender-tag.ai {
+  color: #4F46E5;
+}
+
+.sender-tag.user {
+  color: #E0E7FF;
+}
+
+/* Feedback Cards */
+.feedback-box {
+  background: #FAFAFA;
+  border-radius: 12px;
+  padding: 1.2rem;
+  border: 1px solid #E5E7EB;
+  margin-bottom: 1rem;
+}
+
+.feedback-original {
+  background: #FEE2E2;
+  color: #991B1B;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  font-weight: 500;
+  margin-bottom: 0.6rem;
+}
+
+.feedback-corrected {
+  background: #DCFCE7;
+  color: #166534;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+}
+
+.feedback-natural {
+  background: #EDE9FE;
+  color: #5B21B6;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+}
+
+/* Metric Display Cards */
+.metric-card {
+  background: white;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 1.2rem;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+}
+
+.metric-value {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--primary);
+  line-height: 1.2;
+}
+
+.metric-label {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  margin-top: 0.3rem;
+  text-transform: uppercase;
+}
+
+/* Audio Player Container */
+.audio-player-wrapper {
+  margin-top: 0.6rem;
+  padding: 0.4rem;
+  background: #F8FAFC;
+  border-radius: 8px;
+}
+
+/* Clean Streamlit elements */
+div[data-testid="stSidebar"] {
+  background-color: #F8FAFC;
+  border-right: 1px solid #E2E8F0;
+}
+
+div.stButton > button {
+  border-radius: 10px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+div.stButton > button:hover {
+  transform: translateY(-1px);
+}
